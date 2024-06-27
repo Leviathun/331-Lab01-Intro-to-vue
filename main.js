@@ -22,9 +22,14 @@ createApp({
             { id: 2235, size:'M' },
             { id: 2236, size:'L' }
         ])
+        const cart = ref(0)
+        
+        function addToCart() {
+            cart.value +=1
+        }
 
         return {
-            product ,image ,link ,inStock ,inventory ,onSale ,details ,variants ,sizes
+            product ,image ,link ,inStock ,inventory ,onSale ,details ,variants ,sizes ,cart ,addToCart
         }
     }
 
