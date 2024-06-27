@@ -35,7 +35,7 @@
             <div v-for="size in sizes" :key="size.id">
                 {{size.size}}
             </div>
-            <button class="button" v-on:click="addToCart">Add To Cart</button>
+            <button class="button" @click="addToCart">Add To Cart</button>
         </div>
     </div>
 
