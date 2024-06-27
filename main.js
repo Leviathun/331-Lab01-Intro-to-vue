@@ -17,8 +17,14 @@ createApp({
             { id: 2234, color: 'green' },
             { id: 2235, color: 'blue' }
         ])
+        const sizes = ref([
+            { id: 2234, size:'S' },
+            { id: 2235, size:'M' },
+            { id: 2236, size:'L' }
+        ])
+
         return {
-            product ,image ,link ,inStock ,inventory ,onSale ,details ,variants
+            product ,image ,link ,inStock ,inventory ,onSale ,details ,variants ,sizes
         }
     }
 
