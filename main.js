@@ -3,9 +3,9 @@ const { createApp, ref} = Vue
 createApp({
     setup(){
         const product = ref('Boots')
-        const description = ref('This is a very GOOD boots.')
+        const image = ref('./assets/images/socks_green.jpg')
         return {
-            product ,description
+            product ,image
         }
     }
 
