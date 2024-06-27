@@ -8,8 +8,13 @@ createApp({
         const inStock = ref(true)
         const inventory = ref(100)
         const onSale = ref(true)
+        const details = ref([
+            '50% cotton',
+            '30% wool',
+            '20% polyester'
+        ])
         return {
-            product ,image ,link ,inStock ,inventory ,onSale
+            product ,image ,link ,inStock ,inventory ,onSale ,details
         }
     }
 
