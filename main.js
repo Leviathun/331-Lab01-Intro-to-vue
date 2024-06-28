@@ -3,6 +3,7 @@ const { createApp, ref} = Vue
 createApp({
     setup(){
         const product = ref('Boots')
+        const brand = ref('SE 331')
         const image = ref('./assets/images/socks_green.jpg')
         const link = ref('https://www.camt.cmu.ac.th/index.php/th/')
         const inStock = ref(false)
@@ -36,6 +37,7 @@ createApp({
 
         return {
             product ,
+            brand ,
             image ,
             link ,
             inStock ,
