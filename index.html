@@ -35,7 +35,10 @@
             <div v-for="size in sizes" :key="size.id">
                 {{size.size}}
             </div>
-            <button class="button" :disabled="!inStock" @click="addToCart">Add To Cart</button>
+            
+            <button class="button" :disabled="!inStock" @click="addToCart" :class="{disabledButton: !inStock}">Add To Cart</button>
+        
+            <button class="button" @click="updateStock">Out of Stock</button>
         </div>
     </div>
 
