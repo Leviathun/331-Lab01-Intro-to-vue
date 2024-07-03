@@ -4,13 +4,16 @@ const app = createApp({
     setup(){
         const cart = ref(0)
         const premium = ref(false)
-        const details = ref([
-            
-        ])
+        const details = ref([     ])
+        
+        function updateCart() {
+            cart.value += 1
+        }
         return {
             cart ,
             premium ,
-            details
+            details ,
+            updateCart
         }
     }
 

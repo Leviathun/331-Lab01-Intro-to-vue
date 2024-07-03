@@ -14,9 +14,10 @@
 
 <body>
     <div id="app">
+        
         <div class="nav-bar"></div>
         <div class="cart">Cart({{cart}})</div>
-        <product-display :premium="premium"></product-display>
+        <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
         <product-details></product-details>
 
         </div>
