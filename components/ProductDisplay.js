@@ -16,9 +16,9 @@ const productDisplay = {
         <p v-else-if="inventory <= 10 && inventory > 0 && onSale">Almost out of Stock</p>
         <p v-else>Out of Stock</p>
         <p>shipping: {{shipping}}</p>
-    <ul>
-        <li v-for="detail in details">{{detail}}</li>
-    </ul>
+    
+        <product-details></product-details>
+        
     <div v-for="(variant,index) in variants" :key="variant.id" @mouseover="updateVariant(index)" class="color-circle" :style="{backgroundColor: variant.color}">
         {{variant.color}}
     </div>

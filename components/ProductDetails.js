@@ -13,7 +13,9 @@ const productDetails = {
     },
     setup(props) {
         const details = ref([
-            'very good',
+            '50% cotton',
+            '30% wool',
+            '20% polyester'
         ])
         return {
             details 
