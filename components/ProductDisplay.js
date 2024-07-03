@@ -16,21 +16,21 @@ const productDisplay = {
         <p v-else-if="inventory <= 10 && inventory > 0 && onSale">Almost out of Stock</p>
         <p v-else>Out of Stock</p>
         <p>shipping: {{shipping}}</p>
-        <ul>
-            <li v-for="detail in details">{{detail}}</li>
-        </ul>
-        <div v-for="(variant,index) in variants" :key="variant.id" @mouseover="updateVariant(index)" class="color-circle" :style="{backgroundColor: variant.color}">
-            {{variant.color}}
-        </div>
-        <div v-for="size in sizes" :key="size.id">
-            {{size.size}}
-        </div>
-
-        <button class="button" :disabled="!inStock" @click="addToCart" :class="{disabledButton: !inStock}">Add To Cart</button>
-
-        <button class="button" @click="updateStock">Out of Stock</button>
-        </div>
+    <ul>
+        <li v-for="detail in details">{{detail}}</li>
+    </ul>
+    <div v-for="(variant,index) in variants" :key="variant.id" @mouseover="updateVariant(index)" class="color-circle" :style="{backgroundColor: variant.color}">
+        {{variant.color}}
     </div>
+    <div v-for="size in sizes" :key="size.id">
+        {{size.size}}
+    </div>
+
+    <button class="button" :disabled="!inStock" @click="addToCart" :class="{disabledButton: !inStock}">Add To Cart</button>
+
+    <button class="button" @click="updateStock">Out of Stock</button>
+    </div>
+</div>
     `,
     props: {
         premium: Boolean
@@ -94,8 +94,6 @@ const productDisplay = {
         const inStock = computed(() => {
             return variants.value[selectedVariant.value].quantity
         })
-
-        
 
         return {
             title ,
