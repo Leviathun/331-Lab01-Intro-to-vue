@@ -32,6 +32,7 @@ const productDisplay = {
 
     <button class="button" @click="updateStock">Out of Stock</button>
     </div>
+    <review-form></review-form>
 </div>
     `,
     props: {

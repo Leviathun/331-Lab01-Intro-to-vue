@@ -7,23 +7,21 @@
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-     <script src="./components/ProductDisplay.js"></script>
-     <script src="./components/ProductDetails.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
     <div id="app">
-        
         <div class="nav-bar"></div>
         <div class="cart">Cart({{cart}})</div>
         <product-display :premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeFromCart"></product-display>
-        <product-details></product-details>
-
-        </div>
+         
     </div>
 
     <!-- Import Js -->
+     <script src="./components/ProductDisplay.js"></script>
+     <script src="./components/ProductDetails.js"></script>
+     <script src="./components/ReviewForm.js"></script>
     <script src="./main.js"></script>
 </body>
 
