@@ -1,6 +1,6 @@
 const { createApp, ref, computed} = Vue
 
-createApp({
+const app = createApp({
     setup(){
         const cart = ref(0)
         return {
@@ -8,4 +8,6 @@ createApp({
         }
     }
 
-}).mount('#app')
+})
+app.component('product-display',productDisplay)
+app.mount('#app')
