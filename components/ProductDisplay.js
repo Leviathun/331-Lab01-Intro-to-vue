@@ -27,6 +27,8 @@ const productDisplay = {
     </div>
 
     <button class="button" :disabled="!inStock" @click="addToCart" :class="{disabledButton: !inStock}">Add To Cart</button>
+    <!-- New button to remove from cart -->
+    <button class="button" @click="removeFromCart">Remove Cart</button>
 
     <button class="button" @click="updateStock">Out of Stock</button>
     </div>
@@ -72,6 +74,10 @@ const productDisplay = {
             emit('add-to-cart', variants.value[selectedVariant.value].id)
         }
 
+        function removeFromCart() {
+            emit('remove-from-cart', variants.value[selectedVariant.value].id);
+        }
+
         function updateImage(variantImage){
             image.value = variantImage
         }
@@ -110,7 +116,8 @@ const productDisplay = {
             updateImage ,
             updateStock ,
             updateVariant ,
-            shipping
+            shipping ,
+            removeFromCart
         }
     }
 }
