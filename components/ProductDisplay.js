@@ -32,7 +32,7 @@ const productDisplay = {
 
     <button class="button" @click="updateStock">Out of Stock</button>
     </div>
-    <review-form></review-form>
+    <review-form @review-submitted="addReview"></review-form>
 </div>
     `,
     props: {
@@ -50,6 +50,7 @@ const productDisplay = {
         const brand = ref('SE 331')
         const link = ref('https://www.camt.cmu.ac.th/index.php/th/')
         const inventory = ref(100)
+        
 
         const onSale = ref(true)
         const details = ref([
@@ -102,6 +103,12 @@ const productDisplay = {
             return variants.value[selectedVariant.value].quantity
         })
 
+        const reviews = ref([])
+        function addReview(review){
+            reviews.value.push(review)
+            console.log(review)
+        }
+
         return {
             title ,
             image ,
@@ -118,7 +125,8 @@ const productDisplay = {
             updateStock ,
             updateVariant ,
             shipping ,
-            removeFromCart
+            removeFromCart ,
+            addReview
         }
     }
 }
