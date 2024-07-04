@@ -31,7 +31,8 @@ const reviewForm = {
         function onSubmit(){
             const productReview = {
                 name: form.name,
-                review: form.rating
+                review: form.review,
+                rating: form.rating
             }
             emit('review-submitted', productReview)
             form.name = ''

@@ -32,6 +32,7 @@ const productDisplay = {
 
     <button class="button" @click="updateStock">Out of Stock</button>
     </div>
+    <review-list :reviews="reviews"></review-list>
     <review-form @review-submitted="addReview"></review-form>
 </div>
     `,
@@ -126,7 +127,8 @@ const productDisplay = {
             updateVariant ,
             shipping ,
             removeFromCart ,
-            addReview
+            addReview ,
+            reviews
         }
     }
 }
